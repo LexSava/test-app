@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { HashRouter, Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
+import Page from './components/Page/Page';
+
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const LoadableComponent = Loadable({
+  loader: () => import('./components/Page/Page'),
+  loading: LoadingScreen,
+  delay: 300,
+});
 
+interface IApp {}
+
+const App: React.FC<IApp> = () => (
+  <HashRouter>
+    <Route exact path="/" component={Page} />
+  </HashRouter>
+);
 export default App;
