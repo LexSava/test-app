@@ -13,7 +13,6 @@ export function autoSave(_this: any, name: string) {
     localStorage.setItem(name, JSON.stringify(value));
   });
 }
-// window.localStorage.clear();
 
 class Store {
   search: string = '';
@@ -34,22 +33,18 @@ class Store {
 
   getSearchQuery(enteredSearch: string) {
     this.search = enteredSearch;
-    // console.log(this.search);
   }
 
   getpageWithImages(arr: Array<IBodyImg>) {
     this.pageWithImages = arr;
-    // console.log(this.pageWithImages);
   }
 
   getLikeImages(elem: IBodyImg) {
     this.likeImages = _.uniqWith(this.likeImages.concat(elem), _.isEqual);
-    // console.log(this.savedImages);
   }
 
   removedLikedImages(id: string) {
     this.likeImages = _.remove(this.likeImages, (item) => item.id !== id);
-    // console.log(this.savedImages);
   }
 }
 

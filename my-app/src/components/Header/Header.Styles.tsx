@@ -6,20 +6,17 @@ import {
 } from '@material-ui/core/styles';
 
 import { Badge } from '@material-ui/core/';
+import { colorCoal, colorSunlight } from '../../common/colorApp';
 
-const backgroun = '#f9ba32';
-const colorText = '#2f3131';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     backgroundBlock: {
-      backgroundColor: backgroun,
+      backgroundColor: colorSunlight,
     },
-    informEventHead: {
-      marginLeft: theme.spacing(0.5),
-    },
+
     logo: {
       fontSize: theme.spacing(3),
-      color: colorText,
+      color: colorCoal,
       fontFamily: 'Righteous',
     },
   })

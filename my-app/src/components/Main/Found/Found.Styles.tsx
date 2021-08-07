@@ -1,7 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-
-const colorBtnRemoveLike = '#f9ba32';
-const colorBtnLike = '#2f3131';
+import { colorCoal, colorSunlight } from '../../../common/colorApp';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -12,10 +10,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       height: 180,
     },
     btnLikeColor: {
-      color: colorBtnLike,
+      color: colorCoal,
     },
     btnRemovLikeColor: {
-      color: colorBtnRemoveLike,
+      color: colorSunlight,
     },
     btnLikeFloat: {
       float: 'right',

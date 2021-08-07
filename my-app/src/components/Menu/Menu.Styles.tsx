@@ -1,11 +1,10 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-
-const colorBtnMenu = '#2f3131';
+import { colorCoal } from '../../common/colorApp';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     btmMenu: {
-      color: colorBtnMenu,
+      color: colorCoal,
     },
   })
 );

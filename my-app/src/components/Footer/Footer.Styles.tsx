@@ -1,19 +1,14 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-
-const backgroun = '#f9ba32';
-const colorText = '#2f3131';
+import { colorBone, colorSunlight } from '../../common/colorApp';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     backgroundBlock: {
-      backgroundColor: backgroun,
-    },
-    informEventHead: {
-      marginLeft: theme.spacing(0.5),
+      backgroundColor: colorSunlight,
     },
     logo: {
       fontSize: theme.spacing(3),
-      color: colorText,
+      color: colorBone,
       fontFamily: 'Righteous',
     },
   })
