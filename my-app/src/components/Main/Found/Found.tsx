@@ -6,6 +6,8 @@ import {
   CardMedia,
   CardActions,
   IconButton,
+  ButtonGroup,
+  Button,
 } from '@material-ui/core/';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
@@ -133,8 +135,19 @@ const Found: React.FC<IFound> = (props) => {
   }, [allImagesPage, likedImg]);
 
   return (
-    <Box display="flex" flexWrap="wrap" justifyContent="space-around" p={2}>
-      {cards}
+    <Box pt={2}>
+      <Box textAlign="right" mx="auto" width="80%">
+        <ButtonGroup aria-label="outlined secondary button group">
+          <Button onClick={() => backPage()}>One</Button>
+          <Button disabled style={{ color: '#2f3131' }}>
+            {page} of {allPages}
+          </Button>
+          <Button onClick={() => forwardPage()}>Three</Button>
+        </ButtonGroup>
+      </Box>
+      <Box display="flex" flexWrap="wrap" justifyContent="space-around" mt={2}>
+        {cards}
+      </Box>
     </Box>
   );
 };

@@ -20,14 +20,13 @@ const Menu: React.FC<IMenu> = (props) => {
 
   useEffect(() => {
     props.onSwitchPage(section);
-    console.log(section);
   }, [section]);
 
   return (
     <Box border={2} borderLeft={0} borderColor={colorBorder} py={2} px={1}>
       <Box mx="auto">
         <IconButton
-          color="primary"
+          className={classes.btmMenu}
           aria-label="Home page"
           onClick={() => switchSection('found')}
         >
@@ -36,7 +35,7 @@ const Menu: React.FC<IMenu> = (props) => {
       </Box>
       <Box mx="auto" mt={2}>
         <IconButton
-          color="primary"
+          className={classes.btmMenu}
           aria-label="Home page"
           onClick={() => switchSection('liked')}
         >

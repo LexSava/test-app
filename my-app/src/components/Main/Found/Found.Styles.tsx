@@ -6,9 +6,6 @@ const colorBtnLike = '#2f3131';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    backgroundBlock: {
-      backgroundColor: backgroun,
-    },
     root: {
       minWidth: 250,
     },
