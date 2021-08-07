@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Box, TextField } from '@material-ui/core';
 import Store from '../../store/Store';
 
-interface ISearch {}
+interface ISearch {
+  onSearch(text: string): void;
+}
 
 const Search: React.FC<ISearch> = (props) => {
   const [inputText, setInputText] = useState<string>(Store.search);
@@ -17,13 +19,12 @@ const Search: React.FC<ISearch> = (props) => {
       Store.getSearchQuery(inputText);
       setStartSearch(inputText);
       event.preventDefault();
-      console.log(inputText);
     }
   };
 
-  // useEffect(() => {
-  //   props.onSearch(startSearch);
-  // });
+  useEffect(() => {
+    props.onSearch(startSearch);
+  });
 
   return (
     <Box mx="auto" width="80%">

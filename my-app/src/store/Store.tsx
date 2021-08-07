@@ -47,7 +47,7 @@ class Store {
     // console.log(this.savedImages);
   }
 
-  removedSavedImages(id: string) {
+  removedLikedImages(id: string) {
     this.likeImages = _.remove(this.likeImages, (item) => item.id !== id);
     // console.log(this.savedImages);
   }
