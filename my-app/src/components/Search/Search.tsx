@@ -26,7 +26,7 @@ const Search: React.FC<ISearch> = (props) => {
   // });
 
   return (
-    <Box mx="auto" mt={1} width="80%">
+    <Box mx="auto" width="80%">
       <TextField
         autoFocus
         fullWidth={true}
