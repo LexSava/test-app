@@ -1,7 +1,6 @@
 import React from 'react';
-import { HashRouter, Route, BrowserRouter } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import Page from './components/Page/Page';
 
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import './App.scss';
@@ -16,7 +15,7 @@ interface IApp {}
 
 const App: React.FC<IApp> = () => (
   <HashRouter>
-    <Route exact path="/" component={Page} />
+    <Route exact path="/" component={LoadableComponent} />
   </HashRouter>
 );
 export default App;

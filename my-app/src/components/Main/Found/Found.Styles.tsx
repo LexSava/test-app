@@ -1,6 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
-const backgroun = '#f8f1e5';
 const colorBtnRemoveLike = '#f9ba32';
 const colorBtnLike = '#2f3131';
 

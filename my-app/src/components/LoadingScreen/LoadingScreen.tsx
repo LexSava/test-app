@@ -1,5 +1,5 @@
-import './LoadingScreen.scss';
 import React from 'react';
+import './LoadingScreen.scss';
 import { Box } from '@material-ui/core/';
 
 interface ILoadingScreen {}
