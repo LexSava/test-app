@@ -6,5 +6,18 @@ export const useStyles = makeStyles((theme: Theme) =>
     btmMenu: {
       color: colorCoal,
     },
+    menuBlock: {
+      display: 'block',
+      [theme.breakpoints.down('xs')]: {
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        padding: 0,
+      },
+    },
+    btmMenuBox: {
+      [theme.breakpoints.down('xs')]: {
+        margin: 0,
+      },
+    },
   })
 );

@@ -5,6 +5,9 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       minWidth: 250,
+      [theme.breakpoints.down('xs')]: {
+        minWidth: 220,
+      },
     },
     media: {
       height: 180,
@@ -17,6 +20,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     btnLikeFloat: {
       float: 'right',
+    },
+    btnPagesBlock: {
+      [theme.breakpoints.down('xs')]: {
+        textAlign: 'center',
+      },
     },
   })
 );

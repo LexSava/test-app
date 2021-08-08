@@ -23,8 +23,15 @@ const Menu: React.FC<IMenu> = (props) => {
   }, [section]);
 
   return (
-    <Box border={2} borderLeft={0} borderColor={colorBorder} py={2} px={1}>
-      <Box mx="auto">
+    <Box
+      border={2}
+      borderLeft={0}
+      borderColor={colorBorder}
+      py={2}
+      px={1}
+      className={classes.menuBlock}
+    >
+      <Box mx="auto" className={classes.btmMenuBox}>
         <IconButton
           className={classes.btmMenu}
           aria-label="Home page"
@@ -33,7 +40,7 @@ const Menu: React.FC<IMenu> = (props) => {
           <CloudIcon fontSize="large" />
         </IconButton>
       </Box>
-      <Box mx="auto" mt={2}>
+      <Box mx="auto" mt={2} className={classes.btmMenuBox}>
         <IconButton
           className={classes.btmMenu}
           aria-label="Home page"

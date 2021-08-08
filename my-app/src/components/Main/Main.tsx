@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@material-ui/core/';
+import { Box, useMediaQuery } from '@material-ui/core/';
 import { useStyles } from './Main.Styles';
 import Search from '../Search/Search';
 import Menu from '../Menu/Menu';
@@ -24,7 +24,7 @@ const Main: React.FC<IMain> = (props) => {
 
   if (menuSelector === 'found') {
     return (
-      <Box display="flex" minHeight="500px" className={classes.backgroundBlock}>
+      <Box minHeight="500px" className={classes.mainBlock}>
         <Menu onSwitchPage={switchPage} />
         <Box py={2} width="100%">
           <Search onSearch={processSearch} />
@@ -34,7 +34,7 @@ const Main: React.FC<IMain> = (props) => {
     );
   }
   return (
-    <Box display="flex" minHeight="500px" className={classes.backgroundBlock}>
+    <Box minHeight="500px" className={classes.mainBlock}>
       <Menu onSwitchPage={switchPage} />
       <Box py={2} width="100%">
         <Like />

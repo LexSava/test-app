@@ -136,7 +136,12 @@ const Found: React.FC<IFound> = (props) => {
 
   return (
     <Box pt={2}>
-      <Box textAlign="right" mx="auto" width="80%">
+      <Box
+        textAlign="right"
+        mx="auto"
+        width="80%"
+        className={classes.btnPagesBlock}
+      >
         <ButtonGroup aria-label="outlined secondary button group">
           <Button onClick={() => backPage()}>One</Button>
           <Button disabled style={{ color: '#2f3131' }}>

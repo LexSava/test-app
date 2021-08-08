@@ -5,6 +5,9 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       minWidth: 220,
+      [theme.breakpoints.down('xs')]: {
+        minWidth: 220,
+      },
     },
     media: {
       height: 180,
